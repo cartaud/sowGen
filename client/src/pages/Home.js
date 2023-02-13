@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 
 const Home = () => {
+
     const styles = {
         container: {
             display: 'flex',
@@ -12,7 +13,10 @@ const Home = () => {
             marginTop: '20px'
         },
         button: {
-          border: 'none',
+          textDecoration: 'none',
+          color: 'black',
+          backgroundColor: 'grey',
+          textAlign: 'center',
           width: '50%',
           padding: '20px'
         }
@@ -20,8 +24,9 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <button style={styles.button}>7MRIB Assessment and SOW Generator</button>
-      <button style={styles.button}>11MRIB Assessment and SOW Generator (coming soon)</button>
+      <Link to="/generate" style={styles.button}>7MRB Assessment and SOW Generator</Link>
+      <Link to="/generate" style={styles.button}>11MRB Assessment and SOW Generator (coming soon)</Link>
+      <div style={styles.button}>Job Board</div>
     </div> 
   );
 };
