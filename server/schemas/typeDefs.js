@@ -38,6 +38,7 @@ const typeDefs = gql`
   type Mutation {
     login(username: String!, password: String!): Auth
     createAssessment(input: assessmentBody!): Assessment
+    addHull(input: hullBody!): Assessment
   }
 `;
 

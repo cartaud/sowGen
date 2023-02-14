@@ -11,7 +11,8 @@ import { setContext } from '@apollo/client/link/context';
 import Nav from './components/Nav';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Generate from './pages/Generate'
+import Generate from './pages/Generate';
+import Hull from './pages/Hull';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -60,6 +61,10 @@ const styles = {
           <Route
             path='/generate'
             element={<Generate />}
+          />
+          <Route
+            path='/generate/hull/:id'
+            element={<Hull />}
           />
         </Routes>
         </div>

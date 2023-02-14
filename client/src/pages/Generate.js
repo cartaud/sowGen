@@ -20,10 +20,11 @@ const Generate = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      await createAssessment({
+      const res = await createAssessment({
         variables: { input: { ...formState } }
-      });   
-      window.location.assign('/profile');
+      });  
+      const num = res.data.createAssessment.hullNumber
+      window.location.assign(`/generate/hull/${num}`);
     } catch (err) {
       console.error(err); 
     }
