@@ -1,40 +1,32 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
+import { CREATE_ASSESSMENT } from '../utils/mutations';
+import { QUERY_ME } from "../utils/queries"
 
 const Generate = () => {
+  const { loading, data } = useQuery(QUERY_ME);
+  const profile = data?.me || {};
 
-  const [userFormData, setUserFormData] = useState({ hullNumber: ''});
+  const [formState, setFormState] = useState({ hullNumber: '', hull: [] }); //, propulsion: [], sponson: [], engine: [], piping: [], electrical: [], deck: []
+  const [createAssessment] = useMutation(CREATE_ASSESSMENT)
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
+    setFormState({ ...formState, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
     try {
-      //const { data } = await login({
-      //  variables: {...userFormData}
-      //});
-//need to create route on backend 
+      await createAssessment({
+        variables: { input: { ...formState } }
+      });   
+      window.location.assign('/profile');
     } catch (err) {
-      console.error(err);
-      
+      console.error(err); 
     }
-
-    setUserFormData({
-      hullNumber: ''
-    });
   };
 
     const styles = {
@@ -51,6 +43,16 @@ const Generate = () => {
         }
     };
 
+  if (!profile?.username) {
+    return (
+      <h4 style={styles.noUser}>
+        Oops, looks like you're not logged in! Click 
+        <Link to="/login" style={styles.link}> here </Link>
+        to log in.
+      </h4>
+    );
+  }
+
   return (
     <div style={styles.container}>
         <header style={styles.header}>7-Meter RIB Assessment</header>
@@ -62,13 +64,12 @@ const Generate = () => {
             placeholder='7MRBXXXX'
             name='hullNumber'
             onChange={handleInputChange}
-            value={userFormData.hullNumber}
+            value={formState.hullNumber}
             required
           />
-          
         </Form.Group>
         <Button
-          disabled={!(userFormData.hullNumber)}
+          disabled={!(formState.hullNumber)}
           type='submit'
           variant='success'>
           Submit

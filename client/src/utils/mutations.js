@@ -10,3 +10,17 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const CREATE_ASSESSMENT = gql`
+  mutation createAssessment($input: assessmentBody!) {
+    createAssessment(input: $input) {
+      hullNumber
+      hull {
+        fiberglass
+        gelCoat
+        paint
+        preservation
+      }
+    }
+  }
+`

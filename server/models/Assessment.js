@@ -12,5 +12,6 @@ const assessmentSchema = new Schema({
   },
 });
 
+const Assessment = model('Assessment', assessmentSchema);
 
-module.exports = assessmentSchema;
+module.exports = Assessment;

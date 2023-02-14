@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Assessment } = require('../models');
 const { signToken } = require('../utils/auth');
 const bcrypt = require('bcrypt');
 
@@ -31,7 +31,18 @@ const resolvers = {
         const token = signToken(user);
   
         return { token, user };
-      }
+      },
+      createAssessment: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            const res = await Assessment.create(input)
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
     }
   };
   
