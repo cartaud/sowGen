@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const hullSchema = require('./Hull')
+const sponsonSchema = require('./Sponson')
 
 //When adding fields to schema, make sure to update CreatePortfolio form to gather new fields data
 const assessmentSchema = new Schema({
@@ -9,6 +10,9 @@ const assessmentSchema = new Schema({
     },
   hull: {
     type: [hullSchema]
+  },
+  sponson: {
+    type: [sponsonSchema]
   },
 });
 

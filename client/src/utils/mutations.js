@@ -14,10 +14,24 @@ export const LOGIN = gql`
 export const ADD_HULL = gql`
   mutation addHull($input: hullBody!) {
     addHull(input: $input) {
+      hullNumber
       fiberglass
       gelCoat
       paint
       preservation
+  }
+}
+`
+
+export const ADD_SPONSON = gql`
+  mutation addSponson($input: sponsonBody!) {
+    addSponson(input: $input) {
+      hullNumber
+      tube
+      mbcs
+      retainers
+      transomStraps
+      sponsonGasket
   }
 }
 `
@@ -31,6 +45,13 @@ export const CREATE_ASSESSMENT = gql`
         gelCoat
         paint
         preservation
+      }
+      sponson {
+        tube
+        mbcs
+        retainers
+        transomStraps
+        sponsonGasket
       }
     }
   }

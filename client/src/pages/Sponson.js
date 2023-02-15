@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { useMutation, useQuery } from '@apollo/client';
-import { ADD_HULL } from '../utils/mutations';
+import { ADD_SPONSON } from '../utils/mutations';
 import { QUERY_ME } from "../utils/queries";
 import { useParams } from 'react-router-dom';
 //We are passing the hull number through the url and we will use that to findOneAndUpdate by searching for hull number in Assessments
 //then we will be adding the new set of data for each section (hull, propulsion, engine, ect. )
-const Hull = () => {
+const Sponson = () => {
   const { id } = useParams();
   const hullNumber = id
 
   const { loading, data } = useQuery(QUERY_ME);
   const profile = data?.me || {};
 
-  const [formState, setFormState] = useState({ hullNumber: hullNumber, fiberglass: '', gelCoat: '', paint: '', preservation: '' }); //, propulsion: [], sponson: [], engine: [], piping: [], electrical: [], deck: []
-  const [addHull] = useMutation(ADD_HULL)
+  const [formState, setFormState] = useState({ hullNumber: hullNumber, tube: '', mbcs: '', retainers: '', transomStraps: '', sponsonGasket: '' }); 
+  const [addSponson] = useMutation(ADD_SPONSON)
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -25,11 +25,11 @@ const Hull = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      await addHull({
+      await addSponson({
         variables: { input: { ...formState } }
       });   
       
-      window.location.assign(`/generate/sponson/${hullNumber}`);
+      //window.location.assign(`/generate/sponson/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }
@@ -61,47 +61,57 @@ const Hull = () => {
 
   return (
     <div style={styles.container}>
-        <header style={styles.header}>7-Meter RIB Hull Assessment</header>
+        <header style={styles.header}>7-Meter RIB Sponson Assessment</header>
         <Form onSubmit={handleFormSubmit}>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson?</Form.Label>
           <Form.Control
             type='text'
-            name='fiberglass'
+            name='tube'
             onChange={handleInputChange}
-            value={formState.fiberglass}
+            value={formState.tube}
             required
-          /> SQFT
+          /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Gel Coat damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='hullNumber'>What is the condition of the MBCS</Form.Label>
           <Form.Control
             type='text'
-            name='gelCoat'
+            name='mbcs'
             onChange={handleInputChange}
-            value={formState.gelCoat}
+            value={formState.mbcs}
             required
-          /> SQFT
+          /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson stainless retainers?</Form.Label>
           <Form.Control
             type='text'
-            name='paint'
+            name='retainers'
             onChange={handleInputChange}
-            value={formState.paint}
+            value={formState.retainers}
             required
-          /> SQFT
+          /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson to transom straps?</Form.Label>
           <Form.Control
             type='text'
-            name='preservation'
+            name='transomStraps'
             onChange={handleInputChange}
-            value={formState.preservation}
+            value={formState.transomStraps}
             required
-          /> SQFT
+          /> 
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson gasket/chafe protector?</Form.Label>
+          <Form.Control
+            type='text'
+            name='sponsonGasket'
+            onChange={handleInputChange}
+            value={formState.sponsonGasket}
+            required
+          /> 
         </Form.Group>
         <Button
           disabled={!(formState.hullNumber)}
@@ -114,4 +124,4 @@ const Hull = () => {
   );
 };
 
-export default Hull;
+export default Sponson;

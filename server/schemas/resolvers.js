@@ -43,13 +43,33 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
-      addHull: async (parent, { hullNumber, input }, context) => {
+      addHull: async (parent, { input }, context) => {
         if (context.user) {
           try {
             const res =  await Assessment.findOneAndUpdate(
-              { hullNumber: hullNumber },
+              { hullNumber: input.hullNumber },
               {
                 $addToSet: { hull: input },
+              },
+              {
+                  new: true,
+                  runValidators: true,
+              }
+            );
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      addSponson: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            const res =  await Assessment.findOneAndUpdate(
+              { hullNumber: input.hullNumber },
+              {
+                $addToSet: { sponson: input },
               },
               {
                   new: true,
