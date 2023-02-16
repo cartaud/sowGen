@@ -29,7 +29,7 @@ const Sponson = () => {
         variables: { input: { ...formState } }
       });   
       
-      //window.location.assign(`/generate/sponson/${hullNumber}`);
+      window.location.assign(`/generate/propulsion/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }

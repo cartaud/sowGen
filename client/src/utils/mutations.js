@@ -36,6 +36,37 @@ export const ADD_SPONSON = gql`
 }
 `
 
+export const ADD_PROPULSION = gql`
+  mutation addPropulsion($input: propulsionBody!) {
+    addPropulsion(input: $input) {
+      outdrive 
+      outdrivePaint 
+      propeller 
+      tillerBracket 
+      trimHoses 
+      trimCylinders 
+      outdriveZincs
+      outdriveGrounding
+      bellows
+      outdriveReservoir
+      interiorTrimHose
+      trimPump
+      trimSolenoids
+      trimBracket
+      driveshaft
+      aftHoop
+      aftBearing
+      forwardHoop
+      forwardBearing
+      shiftCables
+      throttleCable
+      cableBracket
+      controlHead
+      throttlePlacard
+  }
+}
+`
+
 export const CREATE_ASSESSMENT = gql`
   mutation createAssessment($input: assessmentBody!) {
     createAssessment(input: $input) {
@@ -52,6 +83,32 @@ export const CREATE_ASSESSMENT = gql`
         retainers
         transomStraps
         sponsonGasket
+      }
+      propulsion {
+        outdrive 
+        outdrivePaint 
+        propeller 
+        tillerBracket 
+        trimHoses 
+        trimCylinders 
+        outdriveZincs
+        outdriveGrounding
+        bellows
+        outdriveReservoir
+        interiorTrimHose
+        trimPump
+        trimSolenoids
+        trimBracket
+        driveshaft
+        aftHoop
+        aftBearing
+        forwardHoop
+        forwardBearing
+        shiftCables
+        throttleCable
+        cableBracket
+        controlHead
+        throttlePlacard
       }
     }
   }
