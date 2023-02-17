@@ -42,6 +42,7 @@ const Propulsion = () => {
     controlHead: '',
     throttlePlacard: '',
  }); 
+ //need to add steering wheel and helm and related hydraulic hoses
 
   const [addPropulsion] = useMutation(ADD_PROPULSION)
 
@@ -57,7 +58,7 @@ const Propulsion = () => {
         variables: { input: { ...formState } }
       });   
       
-      //window.location.assign(`/generate/propulsion/${hullNumber}`);
+      window.location.assign(`/generate/piping/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }
@@ -92,7 +93,7 @@ const Propulsion = () => {
         <header style={styles.header}>7-Meter RIB Sponson Assessment</header>
         <Form onSubmit={handleFormSubmit}>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive?</Form.Label>
+          <Form.Label htmlFor='outdrive'>What is the condition of the outdrive?</Form.Label>
           <Form.Control
             type='text'
             name='outdrive'
@@ -102,7 +103,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive paint?</Form.Label>
+          <Form.Label htmlFor='outdrivePaint'>What is the condition of the outdrive paint?</Form.Label>
           <Form.Control
             type='text'
             name='outdrivePaint'
@@ -112,7 +113,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the propeller</Form.Label>
+          <Form.Label htmlFor='propeller'>What is the condition of the propeller</Form.Label>
           <Form.Control
             type='text'
             name='propeller'
@@ -122,7 +123,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the emergency tiller bracket?</Form.Label>
+          <Form.Label htmlFor='tillerBracket'>What is the condition of the emergency tiller bracket?</Form.Label>
           <Form.Control
             type='text'
             name='tillerBracket'
@@ -132,7 +133,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the trim hoses?</Form.Label>
+          <Form.Label htmlFor='trimHoses'>What is the condition of the trim hoses?</Form.Label>
           <Form.Control
             type='text'
             name='trimHoses'
@@ -142,7 +143,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive trim cylinders?</Form.Label>
+          <Form.Label htmlFor='trimCylinders'>What is the condition of the outdrive trim cylinders?</Form.Label>
           <Form.Control
             type='text'
             name='trimCylinders'
@@ -152,7 +153,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive zincs?</Form.Label>
+          <Form.Label htmlFor='outdriveZincs'>What is the condition of the outdrive zincs?</Form.Label>
           <Form.Control
             type='text'
             name='outdriveZincs'
@@ -162,7 +163,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive grounding wires?</Form.Label>
+          <Form.Label htmlFor='outdriveGrounding'>What is the condition of the outdrive grounding wires?</Form.Label>
           <Form.Control
             type='text'
             name='outdriveGrounding'
@@ -172,7 +173,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the bellows?</Form.Label>
+          <Form.Label htmlFor='bellows'>What is the condition of the bellows?</Form.Label>
           <Form.Control
             type='text'
             name='bellows'
@@ -182,7 +183,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the outdrive fluid reservoir?</Form.Label>
+          <Form.Label htmlFor='outdriveReservoir'>What is the condition of the outdrive fluid reservoir?</Form.Label>
           <Form.Control
             type='text'
             name='outdriveReservoir'
@@ -192,7 +193,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the interior trim hoses?</Form.Label>
+          <Form.Label htmlFor='interiorTrimHose'>What is the condition of the interior trim hoses?</Form.Label>
           <Form.Control
             type='text'
             name='interiorTrimHose'
@@ -202,7 +203,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the trim pump?</Form.Label>
+          <Form.Label htmlFor='trimPump'>What is the condition of the trim pump?</Form.Label>
           <Form.Control
             type='text'
             name='trimPump'
@@ -212,7 +213,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the trim pump solenoids?</Form.Label>
+          <Form.Label htmlFor='trimSolenoids'>What is the condition of the trim pump solenoids?</Form.Label>
           <Form.Control
             type='text'
             name='trimSolenoids'
@@ -222,7 +223,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the trim pump bracket?</Form.Label>
+          <Form.Label htmlFor='trimBracket'>What is the condition of the trim pump bracket?</Form.Label>
           <Form.Control
             type='text'
             name='trimBracket'
@@ -232,7 +233,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the drive shaft?</Form.Label>
+          <Form.Label htmlFor='driveshaft'>What is the condition of the drive shaft?</Form.Label>
           <Form.Control
             type='text'
             name='driveshaft'
@@ -242,7 +243,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the aft driveshaft containment hoop?</Form.Label>
+          <Form.Label htmlFor='aftHoop'>What is the condition of the aft driveshaft containment hoop?</Form.Label>
           <Form.Control
             type='text'
             name='aftHoop'
@@ -252,7 +253,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the aft driveshaft bearing?</Form.Label>
+          <Form.Label htmlFor='aftBearing'>What is the condition of the aft driveshaft bearing?</Form.Label>
           <Form.Control
             type='text'
             name='aftBearing'
@@ -262,7 +263,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the forward driveshaft containment hoop?</Form.Label>
+          <Form.Label htmlFor='forwardHoop'>What is the condition of the forward driveshaft containment hoop?</Form.Label>
           <Form.Control
             type='text'
             name='forwardHoop'
@@ -272,7 +273,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the forward driveshaft bearing?</Form.Label>
+          <Form.Label htmlFor='forwardBearing'>What is the condition of the forward driveshaft bearing?</Form.Label>
           <Form.Control
             type='text'
             name='forwardBearing'
@@ -282,7 +283,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the shift cables?</Form.Label>
+          <Form.Label htmlFor='shiftCables'>What is the condition of the shift cables?</Form.Label>
           <Form.Control
             type='text'
             name='shiftCables'
@@ -292,7 +293,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the throttle control cable?</Form.Label>
+          <Form.Label htmlFor='throttleCable'>What is the condition of the throttle control cable?</Form.Label>
           <Form.Control
             type='text'
             name='throttleCable'
@@ -302,7 +303,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the throttle control cable bracket?</Form.Label>
+          <Form.Label htmlFor='cableBracket'>What is the condition of the throttle control cable bracket?</Form.Label>
           <Form.Control
             type='text'
             name='cableBracket'
@@ -312,7 +313,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the throttle control head?</Form.Label>
+          <Form.Label htmlFor='controlHead'>What is the condition of the throttle control head?</Form.Label>
           <Form.Control
             type='text'
             name='controlHead'
@@ -322,7 +323,7 @@ const Propulsion = () => {
           /> 
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the throttle position placard?</Form.Label>
+          <Form.Label htmlFor='throttlePlacard'>What is the condition of the throttle position placard?</Form.Label>
           <Form.Control
             type='text'
             name='throttlePlacard'

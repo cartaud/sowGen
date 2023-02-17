@@ -47,11 +47,26 @@ const typeDefs = gql`
     controlHead: String
     throttlePlacard: String
   }
+  type Piping {
+    hullNumber: String
+    seacock: String 
+    seacockHose: String
+    strainer: String 
+    strainerHose: String
+    fuelHoses: String 
+    fuelStripping: String 
+    flocs: String 
+    racorHousing: String
+    racorFilter: String
+    fuelTank: String
+    exhaustHose: String
+  }
   type Assessment {
     hullNumber: String!
     hull: [Hull]
     sponson: [Sponson]
     propulsion: [Propulsion]
+    piping: [Piping]
   }
   type Auth {
     token: ID
@@ -103,6 +118,21 @@ const typeDefs = gql`
     throttlePlacard: String
   }
 
+  input pipingBody {
+    hullNumber: String
+    seacock: String 
+    seacockHose: String
+    strainer: String 
+    strainerHose: String
+    fuelHoses: String 
+    fuelStripping: String 
+    flocs: String 
+    racorHousing: String
+    racorFilter: String
+    fuelTank: String
+    exhaustHose: String
+  }
+
   input assessmentBody {
     hullNumber: String!
     hull: [hullBody]
@@ -120,6 +150,7 @@ const typeDefs = gql`
     addHull(input: hullBody!): Hull
     addSponson(input: sponsonBody!): Sponson
     addPropulsion(input: propulsionBody!): Propulsion
+    addPiping(input: pipingBody!): Piping
   }
 `;
 

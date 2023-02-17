@@ -103,6 +103,26 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      addPiping: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            const res =  await Assessment.findOneAndUpdate(
+              { hullNumber: input.hullNumber },
+              {
+                $addToSet: { piping: input },
+              },
+              {
+                  new: true,
+                  runValidators: true,
+              }
+            );
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
     }
   };
   

@@ -67,6 +67,24 @@ export const ADD_PROPULSION = gql`
 }
 `
 
+export const ADD_PIPING = gql`
+  mutation addPiping($input: pipingBody!) {
+    addPiping(input: $input) {
+      seacock 
+      seacockHose
+      strainer 
+      strainerHose
+      fuelHoses 
+      fuelStripping 
+      flocs 
+      racorHousing
+      racorFilter
+      fuelTank
+      exhaustHose
+  }
+}
+`
+
 export const CREATE_ASSESSMENT = gql`
   mutation createAssessment($input: assessmentBody!) {
     createAssessment(input: $input) {
@@ -109,6 +127,19 @@ export const CREATE_ASSESSMENT = gql`
         cableBracket
         controlHead
         throttlePlacard
+      }
+      piping {
+        seacock 
+        seacockHose
+        strainer 
+        strainerHose
+        fuelHoses 
+        fuelStripping 
+        flocs 
+        racorHousing
+        racorFilter
+        fuelTank
+        exhaustHose
       }
     }
   }

@@ -15,6 +15,7 @@ import Generate from './pages/Generate';
 import Hull from './pages/Hull';
 import Sponson from './pages/Sponson'
 import Propulsion from './pages/Propulsion';
+import Piping from './pages/Piping';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -75,6 +76,10 @@ const styles = {
            <Route
             path='/generate/propulsion/:id'
             element={<Propulsion />}
+          />
+          <Route
+            path='/generate/piping/:id'
+            element={<Piping />}
           />
         </Routes>
         </div>
