@@ -1,5 +1,5 @@
 const { gql } = require('apollo-server-express');
-
+//finish adding all parts for engine type and input. Then add the list of items to schema then to front end.
 const typeDefs = gql`
   type User {
     _id: ID!
@@ -61,12 +61,40 @@ const typeDefs = gql`
     fuelTank: String
     exhaustHose: String
   }
+  type Engine {
+    hullNumber: String
+    enginePaint: String
+    engineOil: String
+    oilFilter: String
+    oilHoses: String
+    fuelFilter: String
+    fuelHoses: String
+    coolant: String
+    coolantCap: String
+    waterPump: String
+    afterCooler: String
+    heatExchanger: String
+    waterHoses: String
+    zincs: String
+    starter: String
+    alternator: String
+    ecm: String
+    motorMounts: String
+    mountingBrackets: String
+    turbo: String
+    turboOilLine: String
+    turboCoolantLine: String
+    waterBelt: String
+    driveBelt: String
+    beltGuard: String
+  }
   type Assessment {
     hullNumber: String!
     hull: [Hull]
     sponson: [Sponson]
     propulsion: [Propulsion]
     piping: [Piping]
+    engine: [Engine]
   }
   type Auth {
     token: ID
@@ -133,11 +161,40 @@ const typeDefs = gql`
     exhaustHose: String
   }
 
+  input engineBody {
+    hullNumber: String
+    enginePaint: String
+    engineOil: String
+    oilFilter: String
+    oilHoses: String
+    fuelFilter: String
+    fuelHoses: String
+    coolant: String
+    coolantCap: String
+    waterPump: String
+    afterCooler: String
+    heatExchanger: String
+    waterHoses: String
+    zincs: String
+    starter: String
+    alternator: String
+    ecm: String
+    motorMounts: String
+    mountingBrackets: String
+    turbo: String
+    turboOilLine: String
+    turboCoolantLine: String
+    waterBelt: String
+    driveBelt: String
+    beltGuard: String
+  }
+
   input assessmentBody {
     hullNumber: String!
     hull: [hullBody]
     sponson: [sponsonBody]
     propulsion: [propulsionBody]
+    engine: [engineBody]
   }
 
   type Query {
@@ -151,6 +208,7 @@ const typeDefs = gql`
     addSponson(input: sponsonBody!): Sponson
     addPropulsion(input: propulsionBody!): Propulsion
     addPiping(input: pipingBody!): Piping
+    addEngine(input: engineBody!): Engine
   }
 `;
 

@@ -64,7 +64,7 @@ const Hull = () => {
         <header style={styles.header}>7-Meter RIB Hull Assessment</header>
         <Form onSubmit={handleFormSubmit}>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='fiberglass'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
           <Form.Control
             type='text'
             name='fiberglass'
@@ -74,7 +74,7 @@ const Hull = () => {
           /> SQFT
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Gel Coat damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='gelCoat'>Gel Coat damage to hull? If none, leave blank.</Form.Label>
           <Form.Control
             type='text'
             name='gelCoat'
@@ -84,7 +84,7 @@ const Hull = () => {
           /> SQFT
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='paint'>Paint damage to hull? If none, leave blank.</Form.Label>
           <Form.Control
             type='text'
             name='paint'
@@ -94,7 +94,7 @@ const Hull = () => {
           /> SQFT
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>Fiberglass damage to hull? If none, leave blank.</Form.Label>
+          <Form.Label htmlFor='preservation'>Surface stains to hull? If none, leave blank.</Form.Label>
           <Form.Control
             type='text'
             name='preservation'

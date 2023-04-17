@@ -3,6 +3,7 @@ const hullSchema = require('./Hull')
 const sponsonSchema = require('./Sponson')
 const propulsionSchema = require('./Propulsion');
 const pipingSchema = require('./Piping');
+const engineSchema = require('./Engine');
 
 //When adding fields to schema, make sure to update CreatePortfolio form to gather new fields data
 const assessmentSchema = new Schema({
@@ -21,6 +22,9 @@ const assessmentSchema = new Schema({
   },
   piping: {
     type: [pipingSchema]
+  },
+  engine: {
+    type: [engineSchema]
   }
 });
 

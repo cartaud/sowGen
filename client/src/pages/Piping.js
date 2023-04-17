@@ -43,7 +43,7 @@ const Piping = () => {
         variables: { input: { ...formState } }
       });   
       
-      //window.location.assign(`/generate/propulsion/${hullNumber}`);
+      window.location.assign(`/generate/engine/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }

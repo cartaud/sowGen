@@ -85,6 +85,37 @@ export const ADD_PIPING = gql`
 }
 `
 
+export const ADD_ENGINE = gql`
+  mutation addEngine($input: engineBody!) {
+    addEngine(input: $input) {
+      enginePaint
+      engineOil
+      oilFilter
+      oilHoses
+      fuelFilter
+      fuelHoses
+      coolant
+      coolantCap
+      waterPump
+      afterCooler
+      heatExchanger
+      waterHoses
+      zincs
+      starter
+      alternator
+      ecm
+      motorMounts
+      mountingBrackets
+      turbo
+      turboOilLine
+      turboCoolantLine
+      waterBelt
+      driveBelt
+      beltGuard
+  }
+}
+`
+
 export const CREATE_ASSESSMENT = gql`
   mutation createAssessment($input: assessmentBody!) {
     createAssessment(input: $input) {
@@ -140,6 +171,32 @@ export const CREATE_ASSESSMENT = gql`
         racorFilter
         fuelTank
         exhaustHose
+      }
+      engine {
+        enginePaint
+        engineOil
+        oilFilter
+        oilHoses
+        fuelFilter
+        fuelHoses
+        coolant
+        coolantCap
+        waterPump
+        afterCooler
+        heatExchanger
+        waterHoses
+        zincs
+        starter
+        alternator
+        ecm
+        motorMounts
+        mountingBrackets
+        turbo
+        turboOilLine
+        turboCoolantLine
+        waterBelt
+        driveBelt
+        beltGuard
       }
     }
   }

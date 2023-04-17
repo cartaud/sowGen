@@ -2,7 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Assessment } = require('../models');
 const { signToken } = require('../utils/auth');
 const bcrypt = require('bcrypt');
-
+//Add boat alts per year that get added 
 const resolvers = {
     Query: {
       me: async (parent, args, context) => {
@@ -110,6 +110,26 @@ const resolvers = {
               { hullNumber: input.hullNumber },
               {
                 $addToSet: { piping: input },
+              },
+              {
+                  new: true,
+                  runValidators: true,
+              }
+            );
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+      addEngine: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            const res =  await Assessment.findOneAndUpdate(
+              { hullNumber: input.hullNumber },
+              {
+                $addToSet: { engine: input },
               },
               {
                   new: true,
