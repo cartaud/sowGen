@@ -88,6 +88,41 @@ const typeDefs = gql`
     driveBelt: String
     beltGuard: String
   }
+  type Electrical {
+    hullNumber: String
+    navLights: String
+    anchorLight: String
+    horn: String
+    bilgePump: String
+    pumpLed: String
+    floatSwitch: String
+    controlSwitches: String
+    trimSwitches: String
+    trimGauge: String
+    trimLed: String
+    trimPump: String
+    chargingBreaker: String
+    preHeaterBreaker: String
+    polarityLed: String
+    vhfRadio: String
+    vhfAntenna: String
+    gps: String
+    smartcraft: String
+    whelenControl: String
+    whelenMic: String
+    whelenSpeaker: String
+    mobiDisplay: String
+    mobiPower: String
+    mobiData: String
+    mobiAntenna: String
+    strobe: String
+    receptacles: String
+    barrelSwitch: String
+    batteries: String
+    batteryCables: String
+    batteryCharger: String
+    interiorBreakers: String
+  }
   type Assessment {
     hullNumber: String!
     hull: [Hull]
@@ -189,12 +224,49 @@ const typeDefs = gql`
     beltGuard: String
   }
 
+  input electricalBody {
+    hullNumber: String
+    navLights: String
+    anchorLight: String
+    horn: String
+    bilgePump: String
+    pumpLed: String
+    floatSwitch: String
+    controlSwitches: String
+    trimSwitches: String
+    trimGauge: String
+    trimLed: String
+    trimPump: String
+    chargingBreaker: String
+    preHeaterBreaker: String
+    polarityLed: String
+    vhfRadio: String
+    vhfAntenna: String
+    gps: String
+    smartcraft: String
+    whelenControl: String
+    whelenMic: String
+    whelenSpeaker: String
+    mobiDisplay: String
+    mobiPower: String
+    mobiData: String
+    mobiAntenna: String
+    strobe: String
+    receptacles: String
+    barrelSwitch: String
+    batteries: String
+    batteryCables: String
+    batteryCharger: String
+    interiorBreakers: String
+  }
+
   input assessmentBody {
     hullNumber: String!
     hull: [hullBody]
     sponson: [sponsonBody]
     propulsion: [propulsionBody]
     engine: [engineBody]
+    electrical: [electricalBody]
   }
 
   type Query {
@@ -209,6 +281,7 @@ const typeDefs = gql`
     addPropulsion(input: propulsionBody!): Propulsion
     addPiping(input: pipingBody!): Piping
     addEngine(input: engineBody!): Engine
+    addElectrical(input: electricalBody!): Electrical
   }
 `;
 

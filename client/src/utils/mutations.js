@@ -116,6 +116,45 @@ export const ADD_ENGINE = gql`
 }
 `
 
+export const ADD_ELECTRICAL = gql`
+  mutation addElectrical($input: electricalBody!) {
+    addElectrical(input: $input) {
+      navLights
+      anchorLight
+      horn
+      bilgePump
+      pumpLed
+      floatSwitch
+      controlSwitches
+      trimSwitches
+      trimGauge
+      trimLed
+      trimPump
+      chargingBreaker
+      preHeaterBreaker
+      polarityLed
+      vhfRadio
+      vhfAntenna
+      gps
+      smartcraft
+      whelenControl
+      whelenMic
+      whelenSpeaker
+      mobiDisplay
+      mobiPower
+      mobiData
+      mobiAntenna
+      strobe
+      receptacles
+      barrelSwitch
+      batteries
+      batteryCables
+      batteryCharger
+      interiorBreakers
+  }
+}
+`
+
 export const CREATE_ASSESSMENT = gql`
   mutation createAssessment($input: assessmentBody!) {
     createAssessment(input: $input) {
@@ -197,6 +236,40 @@ export const CREATE_ASSESSMENT = gql`
         waterBelt
         driveBelt
         beltGuard
+      }
+      electrical {
+        navLights
+        anchorLight
+        horn
+        bilgePump
+        pumpLed
+        floatSwitch
+        controlSwitches
+        trimSwitches
+        trimGauge
+        trimLed
+        trimPump
+        chargingBreaker
+        preHeaterBreaker
+        polarityLed
+        vhfRadio
+        vhfAntenna
+        gps
+        smartcraft
+        whelenControl
+        whelenMic
+        whelenSpeaker
+        mobiDisplay
+        mobiPower
+        mobiData
+        mobiAntenna
+        strobe
+        receptacles
+        barrelSwitch
+        batteries
+        batteryCables
+        batteryCharger
+        interiorBreakers
       }
     }
   }

@@ -55,7 +55,7 @@ const Engine = () => {
         variables: { input: { ...formState } }
       });   
       
-      //window.location.assign(`/generate/electrical/${hullNumber}`);
+      window.location.assign(`/generate/electrical/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }

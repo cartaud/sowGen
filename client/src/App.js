@@ -86,6 +86,10 @@ const styles = {
             path='/generate/engine/:id'
             element={<Engine />}
           />
+          <Route
+            path='/generate/electrical/:id'
+            element={<Engine />}
+          />
         </Routes>
         </div>
       </Router>

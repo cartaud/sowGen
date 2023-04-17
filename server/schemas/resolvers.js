@@ -143,6 +143,26 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      addElectrical: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            const res =  await Assessment.findOneAndUpdate(
+              { hullNumber: input.hullNumber },
+              {
+                $addToSet: { electrical: input },
+              },
+              {
+                  new: true,
+                  runValidators: true,
+              }
+            );
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
     }
   };
   

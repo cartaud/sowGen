@@ -28,7 +28,7 @@ const Propulsion = () => {
     bellows: '',
     outdriveReservoir: '',
     interiorTrimHose: '',
-    trimPump: '',
+    trimPump: '', //should move trim pump stuff to electrical
     trimSolenoids: '',
     trimBracket: '',
     driveshaft: '',
