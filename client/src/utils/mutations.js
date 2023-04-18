@@ -140,12 +140,13 @@ export const ADD_ELECTRICAL = gql`
       whelenControl
       whelenMic
       whelenSpeaker
+      strobe
+      spotlight
+      receptacles
       mobiDisplay
       mobiPower
       mobiData
       mobiAntenna
-      strobe
-      receptacles
       barrelSwitch
       batteries
       batteryCables
@@ -259,12 +260,13 @@ export const CREATE_ASSESSMENT = gql`
         whelenControl
         whelenMic
         whelenSpeaker
+        strobe
+        spotlight
+        receptacles
         mobiDisplay
         mobiPower
         mobiData
         mobiAntenna
-        strobe
-        receptacles
         barrelSwitch
         batteries
         batteryCables

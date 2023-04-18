@@ -17,6 +17,7 @@ import Sponson from './pages/Sponson'
 import Propulsion from './pages/Propulsion';
 import Piping from './pages/Piping';
 import Engine from './pages/Engine'
+import Electrical from './pages/Electrical';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -88,7 +89,7 @@ const styles = {
           />
           <Route
             path='/generate/electrical/:id'
-            element={<Engine />}
+            element={<Electrical />}
           />
         </Routes>
         </div>

@@ -38,12 +38,13 @@ const Electrical = () => {
     whelenControl: '',
     whelenMic: '',
     whelenSpeaker: '',
+    strobe: '',
+    spotlight: '',
+    receptacles: '',
     mobiDisplay: '',
     mobiPower: '',
     mobiData: '',
     mobiAntenna: '',
-    strobe: '',
-    receptacles: '',
     barrelSwitch: '',
     batteries: '',
     batteryCables: '',
@@ -310,6 +311,36 @@ const Electrical = () => {
           /> 
         </Form.Group>
         <Form.Group>
+          <Form.Label htmlFor='strobe'>What is the condition of the blue strobe light on security arch?</Form.Label>
+          <Form.Control
+            type='text'
+            name='strobe'
+            onChange={handleInputChange}
+            value={formState.strobe}
+            required
+          /> 
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor='spotlight'>What is the condition of the hand held spotlight?</Form.Label>
+          <Form.Control
+            type='text'
+            name='spotlight'
+            onChange={handleInputChange}
+            value={formState.spotlight}
+            required
+          /> 
+        </Form.Group>
+        <Form.Group>
+          <Form.Label htmlFor='receptacles'>What is the condition of the electrical receptacles?</Form.Label>
+          <Form.Control
+            type='text'
+            name='receptacles'
+            onChange={handleInputChange}
+            value={formState.receptacles}
+            required
+          /> 
+        </Form.Group>
+        <Form.Group>
           <Form.Label htmlFor='mobiDisplay'>What is the condition of the MOBI display head?</Form.Label>
           <Form.Control
             type='text'
@@ -346,26 +377,6 @@ const Electrical = () => {
             name='mobiAntenna'
             onChange={handleInputChange}
             value={formState.mobiAntenna}
-            required
-          /> 
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor='strobe'>What is the condition of the blue strobe light on security arch?</Form.Label>
-          <Form.Control
-            type='text'
-            name='strobe'
-            onChange={handleInputChange}
-            value={formState.strobe}
-            required
-          /> 
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor='receptacles'>What is the condition of the electrical receptacles?</Form.Label>
-          <Form.Control
-            type='text'
-            name='receptacles'
-            onChange={handleInputChange}
-            value={formState.receptacles}
             required
           /> 
         </Form.Group>

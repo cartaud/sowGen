@@ -111,12 +111,13 @@ const typeDefs = gql`
     whelenControl: String
     whelenMic: String
     whelenSpeaker: String
+    strobe: String
+    spotlight: String
+    receptacles: String
     mobiDisplay: String
     mobiPower: String
     mobiData: String
     mobiAntenna: String
-    strobe: String
-    receptacles: String
     barrelSwitch: String
     batteries: String
     batteryCables: String
@@ -130,6 +131,7 @@ const typeDefs = gql`
     propulsion: [Propulsion]
     piping: [Piping]
     engine: [Engine]
+    electrical: [Electrical]
   }
   type Auth {
     token: ID
@@ -247,12 +249,13 @@ const typeDefs = gql`
     whelenControl: String
     whelenMic: String
     whelenSpeaker: String
+    strobe: String
+    spotlight: String
+    receptacles: String
     mobiDisplay: String
     mobiPower: String
     mobiData: String
     mobiAntenna: String
-    strobe: String
-    receptacles: String
     barrelSwitch: String
     batteries: String
     batteryCables: String

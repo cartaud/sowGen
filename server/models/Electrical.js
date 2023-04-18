@@ -81,6 +81,22 @@ const electricalSchema = new Schema({
     type: String,
     required: false,
     },
+    whelenSpeaker: {
+    type: String,
+    required: false,
+    },
+    strobe: {
+    type: String,
+    required: false,
+    },
+    spotlight: {
+    type: String,
+    required: false,
+    },
+    receptacles: {
+    type: String,
+    required: false,
+    },
     mobiDisplay: {
     type: String,
     required: false,
@@ -94,18 +110,6 @@ const electricalSchema = new Schema({
     required: false,
     },
     mobiAntenna: {
-    type: String,
-    required: false,
-    },
-    whelenSpeaker: {
-    type: String,
-    required: false,
-    },
-    strobe: {
-    type: String,
-    required: false,
-    },
-    receptacles: {
     type: String,
     required: false,
     },
