@@ -66,7 +66,7 @@ const Electrical = () => {
         variables: { input: { ...formState } }
       });   
       
-      //window.location.assign(`/generate/deck/${hullNumber}`);
+      window.location.assign(`/generate/deck/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }

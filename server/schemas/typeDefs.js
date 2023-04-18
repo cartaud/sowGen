@@ -124,6 +124,58 @@ const typeDefs = gql`
     batteryCharger: String
     interiorBreakers: String
   }
+  type Deck {
+    hullNumber: String
+    nonskid: String
+    fwdHatchGasket: String
+    fwdHatchHinge: String
+    fwdHatchLatch: String
+    fwdHatchStopper: String
+    archStowage: String
+    archFrame: String
+    centerLifeline: String
+    fwdSeatCushion: String
+    fwdSeatGasket: String
+    fwdSeatHinges: String
+    fwdSeatLatches: String
+    consoleSupportPost: String
+    consoleDeckGasket: String
+    consoleDeckLatches: String
+    consoleDeckHinges: String
+    stbdAccessGasket: String
+    stbdAccessHinges: String
+    stbdAccessBolts: String
+    aftAccessGasket: String
+    aftAccessHinges: String
+    aftAccessBolts: String
+    vhfCover: String
+    gpsCover: String
+    smartcraftCover: String
+    mobiCover: String
+    vhfMicClip: String
+    whelenMicClip: String
+    handrails: String
+    handrailPushpins: String
+    consolePreservation: String
+    coxianCaulk: String
+    aftStowageCushion: String
+    aftStowageGasket: String
+    aftStowageHinges: String
+    aftStowageLatches: String
+    aftBilgeGasket: String
+    aftBilgeHinges: String
+    aftBilgeLatches: String
+    ringBracket: String
+    manualPump: String
+    manualPumpHandle: String
+    mobiPost: String
+    mobiPostPin: String
+    sternPost: String
+    sternPin: String
+    transomCap: String
+    transomCaulk: String
+    scuppers: String
+  }
   type Assessment {
     hullNumber: String!
     hull: [Hull]
@@ -132,6 +184,7 @@ const typeDefs = gql`
     piping: [Piping]
     engine: [Engine]
     electrical: [Electrical]
+    deck: [Deck]
   }
   type Auth {
     token: ID
@@ -263,6 +316,59 @@ const typeDefs = gql`
     interiorBreakers: String
   }
 
+  input deckBody {
+    hullNumber: String
+    nonskid: String
+    fwdHatchGasket: String
+    fwdHatchHinge: String
+    fwdHatchLatch: String
+    fwdHatchStopper: String
+    archStowage: String
+    archFrame: String
+    centerLifeline: String
+    fwdSeatCushion: String
+    fwdSeatGasket: String
+    fwdSeatHinges: String
+    fwdSeatLatches: String
+    consoleSupportPost: String
+    consoleDeckGasket: String
+    consoleDeckLatches: String
+    consoleDeckHinges: String
+    stbdAccessGasket: String
+    stbdAccessHinges: String
+    stbdAccessBolts: String
+    aftAccessGasket: String
+    aftAccessHinges: String
+    aftAccessBolts: String
+    vhfCover: String
+    gpsCover: String
+    smartcraftCover: String
+    mobiCover: String
+    vhfMicClip: String
+    whelenMicClip: String
+    handrails: String
+    handrailPushpins: String
+    consolePreservation: String
+    coxianCaulk: String
+    aftStowageCushion: String
+    aftStowageGasket: String
+    aftStowageHinges: String
+    aftStowageLatches: String
+    aftBilgeGasket: String
+    aftBilgeHinges: String
+    aftBilgeLatches: String
+    ringBracket: String
+    manualPump: String
+    manualPumpHandle: String
+    mobiPost: String
+    mobiPostPin: String
+    sternPost: String
+    sternPin: String
+    transomCap: String
+    transomCaulk: String
+    scuppers: String
+  }
+
   input assessmentBody {
     hullNumber: String!
     hull: [hullBody]
@@ -270,6 +376,7 @@ const typeDefs = gql`
     propulsion: [propulsionBody]
     engine: [engineBody]
     electrical: [electricalBody]
+    deck: [deckBody]
   }
 
   type Query {
@@ -285,6 +392,7 @@ const typeDefs = gql`
     addPiping(input: pipingBody!): Piping
     addEngine(input: engineBody!): Engine
     addElectrical(input: electricalBody!): Electrical
+    addDeck(input: deckBody!): Deck
   }
 `;
 

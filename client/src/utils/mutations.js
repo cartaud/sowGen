@@ -156,6 +156,62 @@ export const ADD_ELECTRICAL = gql`
 }
 `
 
+export const ADD_DECK = gql`
+  mutation addDeck($input: deckBody!) {
+    addDeck(input: $input) {
+      nonskid
+      fwdHatchGasket
+      fwdHatchHinge
+      fwdHatchLatch
+      fwdHatchStopper
+      archStowage
+      archFrame
+      centerLifeline
+      fwdSeatCushion
+      fwdSeatGasket
+      fwdSeatHinges
+      fwdSeatLatches
+      consoleSupportPost
+      consoleDeckGasket
+      consoleDeckLatches
+      consoleDeckHinges
+      stbdAccessGasket
+      stbdAccessHinges
+      stbdAccessBolts
+      aftAccessGasket
+      aftAccessHinges
+      aftAccessBolts
+      vhfCover
+      gpsCover
+      smartcraftCover
+      mobiCover
+      vhfMicClip
+      whelenMicClip
+      handrails
+      handrailPushpins
+      consolePreservation
+      coxianCaulk
+      aftStowageCushion
+      aftStowageGasket
+      aftStowageHinges
+      aftStowageLatches
+      aftBilgeGasket
+      aftBilgeHinges
+      aftBilgeLatches
+      ringBracket
+      manualPump
+      manualPumpHandle
+      mobiPost
+      mobiPostPin
+      sternPost
+      sternPin
+      transomCap
+      transomCaulk
+      scuppers
+  }
+}
+`
+
 export const CREATE_ASSESSMENT = gql`
   mutation createAssessment($input: assessmentBody!) {
     createAssessment(input: $input) {
@@ -272,6 +328,57 @@ export const CREATE_ASSESSMENT = gql`
         batteryCables
         batteryCharger
         interiorBreakers
+      }
+      deck {
+        nonskid
+        fwdHatchGasket
+        fwdHatchHinge
+        fwdHatchLatch
+        fwdHatchStopper
+        archStowage
+        archFrame
+        centerLifeline
+        fwdSeatCushion
+        fwdSeatGasket
+        fwdSeatHinges
+        fwdSeatLatches
+        consoleSupportPost
+        consoleDeckGasket
+        consoleDeckLatches
+        consoleDeckHinges
+        stbdAccessGasket
+        stbdAccessHinges
+        stbdAccessBolts
+        aftAccessGasket
+        aftAccessHinges
+        aftAccessBolts
+        vhfCover
+        gpsCover
+        smartcraftCover
+        mobiCover
+        vhfMicClip
+        whelenMicClip
+        handrails
+        handrailPushpins
+        consolePreservation
+        coxianCaulk
+        aftStowageCushion
+        aftStowageGasket
+        aftStowageHinges
+        aftStowageLatches
+        aftBilgeGasket
+        aftBilgeHinges
+        aftBilgeLatches
+        ringBracket
+        manualPump
+        manualPumpHandle
+        mobiPost
+        mobiPostPin
+        sternPost
+        sternPin
+        transomCap
+        transomCaulk
+        scuppers
       }
     }
   }

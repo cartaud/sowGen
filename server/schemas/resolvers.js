@@ -163,6 +163,27 @@ const resolvers = {
         }
         throw new AuthenticationError('You need to be logged in!');
       },
+      addDeck: async (parent, { input }, context) => {
+        if (context.user) {
+          try {
+            console.log('resolver')
+            const res =  await Assessment.findOneAndUpdate(
+              { hullNumber: input.hullNumber },
+              {
+                $addToSet: { deck: input },
+              },
+              {
+                  new: true,
+                  runValidators: true,
+              }
+            );
+            return res;
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
     }
   };
   
