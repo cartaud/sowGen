@@ -70,7 +70,6 @@ const Hull = () => {
             name='fiberglass'
             onChange={handleInputChange}
             value={formState.fiberglass}
-            required
           /> SQFT
         </Form.Group>
         <Form.Group>
@@ -80,7 +79,6 @@ const Hull = () => {
             name='gelCoat'
             onChange={handleInputChange}
             value={formState.gelCoat}
-            required
           /> SQFT
         </Form.Group>
         <Form.Group>
@@ -90,7 +88,6 @@ const Hull = () => {
             name='paint'
             onChange={handleInputChange}
             value={formState.paint}
-            required
           /> SQFT
         </Form.Group>
         <Form.Group>
@@ -100,7 +97,6 @@ const Hull = () => {
             name='preservation'
             onChange={handleInputChange}
             value={formState.preservation}
-            required
           /> SQFT
         </Form.Group>
         <Button

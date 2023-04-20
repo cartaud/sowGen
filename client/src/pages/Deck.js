@@ -121,7 +121,6 @@ const Deck = () => {
             name='nonskid'
             onChange={handleInputChange}
             value={formState.nonskid}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -131,7 +130,6 @@ const Deck = () => {
             name='fwdHatchGasket'
             onChange={handleInputChange}
             value={formState.fwdHatchGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -141,7 +139,6 @@ const Deck = () => {
             name='fwdHatchHinge'
             onChange={handleInputChange}
             value={formState.fwdHatchHinge}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -151,7 +148,6 @@ const Deck = () => {
             name='fwdHatchLatch'
             onChange={handleInputChange}
             value={formState.fwdHatchLatch}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -161,7 +157,6 @@ const Deck = () => {
             name='fwdHatchStopper'
             onChange={handleInputChange}
             value={formState.fwdHatchStopper}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -171,7 +166,6 @@ const Deck = () => {
             name='archStowage'
             onChange={handleInputChange}
             value={formState.archStowage}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -181,7 +175,6 @@ const Deck = () => {
             name='archFrame'
             onChange={handleInputChange}
             value={formState.archFrame}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -191,7 +184,6 @@ const Deck = () => {
             name='centerLifeline'
             onChange={handleInputChange}
             value={formState.centerLifeline}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -201,7 +193,6 @@ const Deck = () => {
             name='fwdSeatCushion'
             onChange={handleInputChange}
             value={formState.fwdSeatCushion}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -211,7 +202,6 @@ const Deck = () => {
             name='fwdSeatGasket'
             onChange={handleInputChange}
             value={formState.fwdSeatGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -221,7 +211,6 @@ const Deck = () => {
             name='fwdSeatHinges'
             onChange={handleInputChange}
             value={formState.fwdSeatHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -231,7 +220,6 @@ const Deck = () => {
             name='fwdSeatLatches'
             onChange={handleInputChange}
             value={formState.fwdSeatLatches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -241,7 +229,6 @@ const Deck = () => {
             name='consoleSupportPost'
             onChange={handleInputChange}
             value={formState.consoleSupportPost}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -251,7 +238,6 @@ const Deck = () => {
             name='consoleDeckGasket'
             onChange={handleInputChange}
             value={formState.consoleDeckGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -261,7 +247,6 @@ const Deck = () => {
             name='consoleDeckLatches'
             onChange={handleInputChange}
             value={formState.consoleDeckLatches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -271,7 +256,6 @@ const Deck = () => {
             name='consoleDeckHinges'
             onChange={handleInputChange}
             value={formState.consoleDeckHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -281,7 +265,6 @@ const Deck = () => {
             name='stbdAccessGasket'
             onChange={handleInputChange}
             value={formState.stbdAccessGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -291,7 +274,6 @@ const Deck = () => {
             name='stbdAccessHinges'
             onChange={handleInputChange}
             value={formState.stbdAccessHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -301,7 +283,6 @@ const Deck = () => {
             name='stbdAccessBolts'
             onChange={handleInputChange}
             value={formState.stbdAccessBolts}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -311,7 +292,6 @@ const Deck = () => {
             name='aftAccessGasket'
             onChange={handleInputChange}
             value={formState.aftAccessGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -321,7 +301,6 @@ const Deck = () => {
             name='aftAccessHinges'
             onChange={handleInputChange}
             value={formState.aftAccessHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -331,7 +310,6 @@ const Deck = () => {
             name='aftAccessBolts'
             onChange={handleInputChange}
             value={formState.aftAccessBolts}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -341,7 +319,6 @@ const Deck = () => {
             name='vhfCover'
             onChange={handleInputChange}
             value={formState.vhfCover}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -351,7 +328,6 @@ const Deck = () => {
             name='gpsCover'
             onChange={handleInputChange}
             value={formState.gpsCover}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -361,7 +337,6 @@ const Deck = () => {
             name='smartcraftCover'
             onChange={handleInputChange}
             value={formState.smartcraftCover}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -371,7 +346,6 @@ const Deck = () => {
             name='mobiCover'
             onChange={handleInputChange}
             value={formState.mobiCover}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -381,7 +355,6 @@ const Deck = () => {
             name='vhfMicClip'
             onChange={handleInputChange}
             value={formState.vhfMicClip}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -391,7 +364,6 @@ const Deck = () => {
             name='whelenMicClip'
             onChange={handleInputChange}
             value={formState.whelenMicClip}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -401,7 +373,6 @@ const Deck = () => {
             name='handrails'
             onChange={handleInputChange}
             value={formState.handrails}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -411,7 +382,6 @@ const Deck = () => {
             name='handrailPushpins'
             onChange={handleInputChange}
             value={formState.handrailPushpins}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -421,7 +391,6 @@ const Deck = () => {
             name='consolePreservation'
             onChange={handleInputChange}
             value={formState.consolePreservation}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -431,7 +400,6 @@ const Deck = () => {
             name='coxianCaulk'
             onChange={handleInputChange}
             value={formState.coxianCaulk}
-            required
           /> 
         </Form.Group> 
         <Form.Group>
@@ -441,7 +409,6 @@ const Deck = () => {
             name='aftStowageCushion'
             onChange={handleInputChange}
             value={formState.aftStowageCushion}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -451,7 +418,6 @@ const Deck = () => {
             name='aftStowageGasket'
             onChange={handleInputChange}
             value={formState.aftStowageGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -461,7 +427,6 @@ const Deck = () => {
             name='aftStowageHinges'
             onChange={handleInputChange}
             value={formState.aftStowageHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -471,7 +436,6 @@ const Deck = () => {
             name='aftStowageLatches'
             onChange={handleInputChange}
             value={formState.aftStowageLatches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -481,7 +445,6 @@ const Deck = () => {
             name='aftBilgeGasket'
             onChange={handleInputChange}
             value={formState.aftBilgeGasket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -491,7 +454,6 @@ const Deck = () => {
             name='aftBilgeHinges'
             onChange={handleInputChange}
             value={formState.aftBilgeHinges}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -501,7 +463,6 @@ const Deck = () => {
             name='aftBilgeLatches'
             onChange={handleInputChange}
             value={formState.aftBilgeLatches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -511,7 +472,6 @@ const Deck = () => {
             name='ringBracket'
             onChange={handleInputChange}
             value={formState.ringBracket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -521,7 +481,6 @@ const Deck = () => {
             name='manualPump'
             onChange={handleInputChange}
             value={formState.manualPump}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -531,7 +490,6 @@ const Deck = () => {
             name='manualPumpHandle'
             onChange={handleInputChange}
             value={formState.manualPumpHandle}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -541,7 +499,6 @@ const Deck = () => {
             name='mobiPost'
             onChange={handleInputChange}
             value={formState.mobiPost}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -551,7 +508,6 @@ const Deck = () => {
             name='mobiPostPin'
             onChange={handleInputChange}
             value={formState.mobiPostPin}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -561,7 +517,6 @@ const Deck = () => {
             name='sternPost'
             onChange={handleInputChange}
             value={formState.sternPost}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -571,7 +526,6 @@ const Deck = () => {
             name='sternPin'
             onChange={handleInputChange}
             value={formState.sternPin}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -581,7 +535,6 @@ const Deck = () => {
             name='transomCap'
             onChange={handleInputChange}
             value={formState.transomCap}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -591,7 +544,6 @@ const Deck = () => {
             name='transomCaulk'
             onChange={handleInputChange}
             value={formState.transomCaulk}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -601,7 +553,6 @@ const Deck = () => {
             name='scuppers'
             onChange={handleInputChange}
             value={formState.scuppers}
-            required
           /> 
         </Form.Group>
         <Button

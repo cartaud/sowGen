@@ -96,7 +96,6 @@ const Engine = () => {
             name='enginePaint'
             onChange={handleInputChange}
             value={formState.enginePaint}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -106,7 +105,6 @@ const Engine = () => {
             name='engineOil'
             onChange={handleInputChange}
             value={formState.engineOil}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -116,7 +114,6 @@ const Engine = () => {
             name='oilFilter'
             onChange={handleInputChange}
             value={formState.oilFilter}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -126,7 +123,6 @@ const Engine = () => {
             name='oilHoses'
             onChange={handleInputChange}
             value={formState.oilHoses}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -136,7 +132,6 @@ const Engine = () => {
             name='fuelFilter'
             onChange={handleInputChange}
             value={formState.fuelFilter}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -146,7 +141,6 @@ const Engine = () => {
             name='fuelHoses'
             onChange={handleInputChange}
             value={formState.fuelHoses}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -156,7 +150,6 @@ const Engine = () => {
             name='coolant'
             onChange={handleInputChange}
             value={formState.coolant}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -166,7 +159,6 @@ const Engine = () => {
             name='coolantCap'
             onChange={handleInputChange}
             value={formState.coolantCap}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -176,7 +168,6 @@ const Engine = () => {
             name='waterPump'
             onChange={handleInputChange}
             value={formState.waterPump}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -186,7 +177,6 @@ const Engine = () => {
             name='afterCooler'
             onChange={handleInputChange}
             value={formState.afterCooler}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -196,7 +186,6 @@ const Engine = () => {
             name='heatExchanger'
             onChange={handleInputChange}
             value={formState.heatExchanger}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -206,7 +195,6 @@ const Engine = () => {
             name='waterHoses'
             onChange={handleInputChange}
             value={formState.waterHoses}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -216,7 +204,6 @@ const Engine = () => {
             name='zincs'
             onChange={handleInputChange}
             value={formState.zincs}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -226,7 +213,6 @@ const Engine = () => {
             name='starter'
             onChange={handleInputChange}
             value={formState.starter}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -236,7 +222,6 @@ const Engine = () => {
             name='alternator'
             onChange={handleInputChange}
             value={formState.alternator}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -246,7 +231,6 @@ const Engine = () => {
             name='ecm'
             onChange={handleInputChange}
             value={formState.ecm}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -256,7 +240,6 @@ const Engine = () => {
             name='motorMounts'
             onChange={handleInputChange}
             value={formState.motorMounts}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -266,7 +249,6 @@ const Engine = () => {
             name='mountingBrackets'
             onChange={handleInputChange}
             value={formState.mountingBrackets}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -276,7 +258,6 @@ const Engine = () => {
             name='turbo'
             onChange={handleInputChange}
             value={formState.turbo}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -286,7 +267,6 @@ const Engine = () => {
             name='turboOilLine'
             onChange={handleInputChange}
             value={formState.turboOilLine}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -296,7 +276,6 @@ const Engine = () => {
             name='turboCoolantLine'
             onChange={handleInputChange}
             value={formState.turboCoolantLine}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -306,7 +285,6 @@ const Engine = () => {
             name='waterBelt'
             onChange={handleInputChange}
             value={formState.waterBelt}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -316,7 +294,6 @@ const Engine = () => {
             name='driveBelt'
             onChange={handleInputChange}
             value={formState.driveBelt}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -326,7 +303,6 @@ const Engine = () => {
             name='beltGuard'
             onChange={handleInputChange}
             value={formState.beltGuard}
-            required
           /> 
         </Form.Group>
         <Button

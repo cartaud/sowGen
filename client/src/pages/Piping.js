@@ -84,7 +84,6 @@ const Piping = () => {
             name='seacock'
             onChange={handleInputChange}
             value={formState.seacock}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -94,7 +93,6 @@ const Piping = () => {
             name='seacockHose'
             onChange={handleInputChange}
             value={formState.seacockHose}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -104,7 +102,6 @@ const Piping = () => {
             name='strainer'
             onChange={handleInputChange}
             value={formState.strainer}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -114,7 +111,6 @@ const Piping = () => {
             name='strainerHose'
             onChange={handleInputChange}
             value={formState.strainerHose}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -124,7 +120,6 @@ const Piping = () => {
             name='fuelHoses'
             onChange={handleInputChange}
             value={formState.fuelHoses}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -134,7 +129,6 @@ const Piping = () => {
             name='fuelStripping'
             onChange={handleInputChange}
             value={formState.fuelStripping}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -144,7 +138,6 @@ const Piping = () => {
             name='flocs'
             onChange={handleInputChange}
             value={formState.flocs}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -154,7 +147,6 @@ const Piping = () => {
             name='racorHousing'
             onChange={handleInputChange}
             value={formState.racorHousing}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -164,7 +156,6 @@ const Piping = () => {
             name='racorFilter'
             onChange={handleInputChange}
             value={formState.racorFilter}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -174,7 +165,6 @@ const Piping = () => {
             name='fuelTank'
             onChange={handleInputChange}
             value={formState.fuelTank}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -184,7 +174,6 @@ const Piping = () => {
             name='exhaustHose'
             onChange={handleInputChange}
             value={formState.exhaustHose}
-            required
           /> 
         </Form.Group>
         <Button

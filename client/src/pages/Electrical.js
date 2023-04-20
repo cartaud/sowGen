@@ -107,7 +107,6 @@ const Electrical = () => {
             name='navLights'
             onChange={handleInputChange}
             value={formState.navLights}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -117,7 +116,6 @@ const Electrical = () => {
             name='anchorLight'
             onChange={handleInputChange}
             value={formState.anchorLight}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -127,7 +125,6 @@ const Electrical = () => {
             name='horn'
             onChange={handleInputChange}
             value={formState.horn}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -137,7 +134,6 @@ const Electrical = () => {
             name='bilgePump'
             onChange={handleInputChange}
             value={formState.bilgePump}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -147,7 +143,6 @@ const Electrical = () => {
             name='pumpLed'
             onChange={handleInputChange}
             value={formState.pumpLed}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -157,7 +152,6 @@ const Electrical = () => {
             name='floatSwitch'
             onChange={handleInputChange}
             value={formState.floatSwitch}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -167,7 +161,6 @@ const Electrical = () => {
             name='controlSwitches'
             onChange={handleInputChange}
             value={formState.controlSwitches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -177,7 +170,6 @@ const Electrical = () => {
             name='trimSwitches'
             onChange={handleInputChange}
             value={formState.trimSwitches}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -187,7 +179,6 @@ const Electrical = () => {
             name='trimGauge'
             onChange={handleInputChange}
             value={formState.trimGauge}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -197,7 +188,6 @@ const Electrical = () => {
             name='trimLed'
             onChange={handleInputChange}
             value={formState.trimLed}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -207,7 +197,6 @@ const Electrical = () => {
             name='trimPump'
             onChange={handleInputChange}
             value={formState.trimPump}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -217,7 +206,6 @@ const Electrical = () => {
             name='chargingBreaker'
             onChange={handleInputChange}
             value={formState.chargingBreaker}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -227,7 +215,6 @@ const Electrical = () => {
             name='preHeaterBreaker'
             onChange={handleInputChange}
             value={formState.preHeaterBreaker}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -237,7 +224,6 @@ const Electrical = () => {
             name='polarityLed'
             onChange={handleInputChange}
             value={formState.polarityLed}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -247,7 +233,6 @@ const Electrical = () => {
             name='vhfRadio'
             onChange={handleInputChange}
             value={formState.vhfRadio}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -257,7 +242,6 @@ const Electrical = () => {
             name='vhfAntenna'
             onChange={handleInputChange}
             value={formState.vhfAntenna}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -267,7 +251,6 @@ const Electrical = () => {
             name='gps'
             onChange={handleInputChange}
             value={formState.gps}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -277,7 +260,6 @@ const Electrical = () => {
             name='smartcraft'
             onChange={handleInputChange}
             value={formState.smartcraft}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -287,7 +269,6 @@ const Electrical = () => {
             name='whelenControl'
             onChange={handleInputChange}
             value={formState.whelenControl}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -297,7 +278,6 @@ const Electrical = () => {
             name='whelenMic'
             onChange={handleInputChange}
             value={formState.whelenMic}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -307,7 +287,6 @@ const Electrical = () => {
             name='whelenSpeaker'
             onChange={handleInputChange}
             value={formState.whelenSpeaker}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -317,7 +296,6 @@ const Electrical = () => {
             name='strobe'
             onChange={handleInputChange}
             value={formState.strobe}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -327,7 +305,6 @@ const Electrical = () => {
             name='spotlight'
             onChange={handleInputChange}
             value={formState.spotlight}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -337,7 +314,6 @@ const Electrical = () => {
             name='receptacles'
             onChange={handleInputChange}
             value={formState.receptacles}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -347,7 +323,6 @@ const Electrical = () => {
             name='mobiDisplay'
             onChange={handleInputChange}
             value={formState.mobiDisplay}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -357,7 +332,6 @@ const Electrical = () => {
             name='mobiPower'
             onChange={handleInputChange}
             value={formState.mobiPower}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -367,7 +341,6 @@ const Electrical = () => {
             name='mobiData'
             onChange={handleInputChange}
             value={formState.mobiData}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -377,7 +350,6 @@ const Electrical = () => {
             name='mobiAntenna'
             onChange={handleInputChange}
             value={formState.mobiAntenna}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -387,7 +359,6 @@ const Electrical = () => {
             name='barrelSwitch'
             onChange={handleInputChange}
             value={formState.barrelSwitch}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -397,7 +368,6 @@ const Electrical = () => {
             name='batteries'
             onChange={handleInputChange}
             value={formState.batteries}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -407,7 +377,6 @@ const Electrical = () => {
             name='batteryCables'
             onChange={handleInputChange}
             value={formState.batteryCables}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -417,7 +386,6 @@ const Electrical = () => {
             name='batteryCharger'
             onChange={handleInputChange}
             value={formState.batteryCharger}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -427,7 +395,6 @@ const Electrical = () => {
             name='interiorBreakers'
             onChange={handleInputChange}
             value={formState.interiorBreakers}
-            required
           /> 
         </Form.Group>
         <Button

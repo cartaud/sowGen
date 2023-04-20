@@ -99,7 +99,6 @@ const Propulsion = () => {
             name='outdrive'
             onChange={handleInputChange}
             value={formState.outdrive}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -109,7 +108,6 @@ const Propulsion = () => {
             name='outdrivePaint'
             onChange={handleInputChange}
             value={formState.outdrivePaint}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -119,7 +117,6 @@ const Propulsion = () => {
             name='propeller'
             onChange={handleInputChange}
             value={formState.propeller}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -129,7 +126,6 @@ const Propulsion = () => {
             name='tillerBracket'
             onChange={handleInputChange}
             value={formState.tillerBracket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -139,7 +135,6 @@ const Propulsion = () => {
             name='trimHoses'
             onChange={handleInputChange}
             value={formState.trimHoses}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -149,7 +144,6 @@ const Propulsion = () => {
             name='trimCylinders'
             onChange={handleInputChange}
             value={formState.trimCylinders}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -159,7 +153,6 @@ const Propulsion = () => {
             name='outdriveZincs'
             onChange={handleInputChange}
             value={formState.outdriveZincs}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -169,7 +162,6 @@ const Propulsion = () => {
             name='outdriveGrounding'
             onChange={handleInputChange}
             value={formState.outdriveGrounding}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -179,7 +171,6 @@ const Propulsion = () => {
             name='bellows'
             onChange={handleInputChange}
             value={formState.bellows}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -189,7 +180,6 @@ const Propulsion = () => {
             name='outdriveReservoir'
             onChange={handleInputChange}
             value={formState.outdriveReservoir}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -199,7 +189,6 @@ const Propulsion = () => {
             name='interiorTrimHose'
             onChange={handleInputChange}
             value={formState.interiorTrimHose}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -209,7 +198,6 @@ const Propulsion = () => {
             name='trimPump'
             onChange={handleInputChange}
             value={formState.trimPump}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -219,7 +207,6 @@ const Propulsion = () => {
             name='trimSolenoids'
             onChange={handleInputChange}
             value={formState.trimSolenoids}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -229,7 +216,6 @@ const Propulsion = () => {
             name='trimBracket'
             onChange={handleInputChange}
             value={formState.trimBracket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -239,7 +225,6 @@ const Propulsion = () => {
             name='driveshaft'
             onChange={handleInputChange}
             value={formState.driveshaft}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -249,7 +234,6 @@ const Propulsion = () => {
             name='aftHoop'
             onChange={handleInputChange}
             value={formState.aftHoop}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -259,7 +243,6 @@ const Propulsion = () => {
             name='aftBearing'
             onChange={handleInputChange}
             value={formState.aftBearing}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -269,7 +252,6 @@ const Propulsion = () => {
             name='forwardHoop'
             onChange={handleInputChange}
             value={formState.forwardHoop}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -279,7 +261,6 @@ const Propulsion = () => {
             name='forwardBearing'
             onChange={handleInputChange}
             value={formState.forwardBearing}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -289,7 +270,6 @@ const Propulsion = () => {
             name='shiftCables'
             onChange={handleInputChange}
             value={formState.shiftCables}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -299,7 +279,6 @@ const Propulsion = () => {
             name='throttleCable'
             onChange={handleInputChange}
             value={formState.throttleCable}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -309,7 +288,6 @@ const Propulsion = () => {
             name='cableBracket'
             onChange={handleInputChange}
             value={formState.cableBracket}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -319,7 +297,6 @@ const Propulsion = () => {
             name='controlHead'
             onChange={handleInputChange}
             value={formState.controlHead}
-            required
           /> 
         </Form.Group>
         <Form.Group>
@@ -329,7 +306,6 @@ const Propulsion = () => {
             name='throttlePlacard'
             onChange={handleInputChange}
             value={formState.throttlePlacard}
-            required
           /> 
         </Form.Group>
         <Button

@@ -64,54 +64,82 @@ const Sponson = () => {
         <header style={styles.header}>7-Meter RIB Sponson Assessment</header>
         <Form onSubmit={handleFormSubmit}>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson?</Form.Label>
+          <Form.Label htmlFor='tube'>What is the condition of the sponson?</Form.Label>
           <Form.Control
-            type='text'
+            type='radio'
             name='tube'
             onChange={handleInputChange}
-            value={formState.tube}
-            required
+            value='Sponson is holding air but surface is dirty, recommend cleaning the surface of the sponson in its entirety.'
           /> 
+          <span>Clean</span>
+          <Form.Control
+            type='radio'
+            name='tube'
+            onChange={handleInputChange}
+            value='Sponson condition is below average, recommend accomplishing a SLEP level 1 to the sponson.'
+          /> 
+          <span>SLEP 1</span>
+          <Form.Control
+            type='radio'
+            name='tube'
+            onChange={handleInputChange}
+            value='Sponson is beyond SLEP repair, recommend replacing sponson with new.'
+          /> 
+          <span>Replace</span>
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the MBCS</Form.Label>
+          <Form.Label htmlFor='mbcs'>What is the condition of the MBCS</Form.Label>
           <Form.Control
-            type='text'
+            type='radio'
             name='mbcs'
             onChange={handleInputChange}
-            value={formState.mbcs}
-            required
-          /> 
+            value='Sponson MBCS is damaged, recommend replacing with new and installing using new lacing material.'
+          />  
+          <span>Replace</span>
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson stainless retainers?</Form.Label>
+          <Form.Label htmlFor='retainers'>What is the condition of the sponson stainless retainers?</Form.Label>
           <Form.Control
-            type='text'
+            type='radio'
             name='retainers'
             onChange={handleInputChange}
-            value={formState.retainers}
-            required
+            value='Sponson metal skirt retainers have surface corrosion, recommend accomplishing preservation to remove corrosion.'
           /> 
+          <span>Preservation</span>
+          <Form.Control
+            type='radio'
+            name='retainers'
+            onChange={handleInputChange}
+            value='Sponson skirt retainers are beyond preservation or repair, recommend replacing with new and installing using new stainless steel fasteners.'
+          /> 
+          <span>Replace</span>
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson to transom straps?</Form.Label>
+          <Form.Label htmlFor='transomStraps'>What is the condition of the sponson to transom straps?</Form.Label>
           <Form.Control
-            type='text'
+            type='radio'
             name='transomStraps'
             onChange={handleInputChange}
-            value={formState.transomStraps}
-            required
+            value='Sponson transom attachment straps are peeling off, recommend gluing to the surface of the sponson.'
           /> 
+          <span>Peeling</span>
+          <Form.Control
+            type='radio'
+            name='transomStraps'
+            onChange={handleInputChange}
+            value='Sponson transom straps are beyond preservation or repair, recommend replacing with new.'
+          /> 
+          <span>Replace</span>
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor='hullNumber'>What is the condition of the sponson gasket/chafe protector?</Form.Label>
+          <Form.Label htmlFor='sponsonGasket'>What is the condition of the sponson gasket/chafe protector?</Form.Label>
           <Form.Control
-            type='text'
+            type='radio'
             name='sponsonGasket'
             onChange={handleInputChange}
-            value={formState.sponsonGasket}
-            required
+            value='Sponson to transom gasket/chafe protector is damaged, recommend replacing with new.'
           /> 
+          <span>Replace</span>
         </Form.Group>
         <Button
           disabled={!(formState.hullNumber)}
