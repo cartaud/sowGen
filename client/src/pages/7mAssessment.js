@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { useMutation, useQuery } from '@apollo/client';
-import { ADD_HULL } from '../utils/mutations';
-import { QUERY_ME } from "../utils/queries";
+import { useQuery } from '@apollo/client';
+import { QUERY_ASSESSMENT } from "../utils/queries";
 import { useParams } from 'react-router-dom';
-//We are passing the hull number through the url and we will use that to findOneAndUpdate by searching for hull number in Assessments
-//then we will be adding the new set of data for each section (hull, propulsion, engine, ect. )
+
 const SevenMeterAssessment = () => {
   const { id } = useParams();
-  const hullNumber = id
-
-  const { loading, data } = useQuery(QUERY_ME);
-  const profile = data?.me || {};
-
+  const hullNumber = id;
   
 
+  const { loading, data } = useQuery(QUERY_ASSESSMENT, {
+    variables: { hullNumber },
+    });
   
+    const assessment = data?.assessment 
+    const hull = assessment.hull 
+   
 
+    //Need to create a query that uses the hull number in the url to get the developed assessment with that hull number from the db
+    //See Share page in Portfol.io project for similar example
   
-
     const styles = {
         container: {
             display: 'flex',
@@ -31,15 +32,18 @@ const SevenMeterAssessment = () => {
         header: {
           color: 'purple',
           fontSize: '24px'
+        },
+        noUser: {
+
         }
     };
 
-  if (!profile?.username) {
+  if (!assessment) {
     return (
       <h4 style={styles.noUser}>
-        Oops, looks like you're not logged in! Click 
-        <Link to="/login" style={styles.link}> here </Link>
-        to log in.
+        Oops, there is no assessment found for this hull number! Click 
+        <Link to="/generate" style={styles.link}> here </Link>
+        to start one.
       </h4>
     );
   }

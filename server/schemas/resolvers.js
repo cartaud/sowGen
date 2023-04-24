@@ -12,12 +12,20 @@ const resolvers = {
         }
   
         throw new AuthenticationError('Not logged in');
+      },
+      assessment: async(parent, { hullNumber }) => {
+        const assessment = await Assessment.findOne({ hullNumber });
+        
+        if (!assessment) {
+          throw new AuthenticationError('Incorrect credentials');
+        }
+        return assessment
       }
   },
     Mutation: {
       login: async (parent, { username, password }) => {
         const user = await User.findOne({ username });
-  
+        
         if (!user) {
           throw new AuthenticationError('Incorrect credentials');
         }

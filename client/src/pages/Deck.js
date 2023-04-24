@@ -80,7 +80,7 @@ const Deck = () => {
         variables: { input: { ...formState } }
       });   
       
-      window.location.assign(`/home`);
+      window.location.assign(`/generate/7MeterAssessment/${hullNumber}`);
     } catch (err) {
       console.error(err); 
     }

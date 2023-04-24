@@ -381,6 +381,7 @@ const typeDefs = gql`
 
   type Query {
     me: User
+    assessment(hullNumber: String): Assessment
   }
 
   type Mutation {
