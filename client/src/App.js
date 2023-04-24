@@ -19,6 +19,7 @@ import Piping from './pages/Piping';
 import Engine from './pages/Engine'
 import Electrical from './pages/Electrical';
 import Deck from './pages/Deck';
+import SevenMeterAssessment from './pages/7mAssessment'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -95,6 +96,10 @@ const styles = {
           <Route
             path='/generate/deck/:id'
             element={<Deck />}
+          />
+          <Route
+            path='/generate/7MeterAssessment/:id'
+            element={<SevenMeterAssessment />}
           />
         </Routes>
         </div>
