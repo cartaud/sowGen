@@ -15,11 +15,24 @@ const SevenMeterAssessment = () => {
     });
   
     const assessment = data?.assessment 
-    const hull = assessment.hull 
-   
+    
+   if (assessment) {
+    var size = Object.keys(assessment);
+    let value = Object.values(assessment);
+    
+    for (let i = 0; i <= size.length-1; i++) {
+        let obj = Object.values(value[i][0])
+        for (let j = 0; j <= obj.length-1; j++) {
+            if (obj[j] != "" && j != 0) {
+                console.log(obj[j])
+            }
+        }
+    }
+   }
 
-    //Need to create a query that uses the hull number in the url to get the developed assessment with that hull number from the db
-    //See Share page in Portfol.io project for similar example
+    //need to loop through the assessment object
+    //Grab the _typname and make that the header for each section
+    //If key value is not "" then add it to the list for that section
   
     const styles = {
         container: {
