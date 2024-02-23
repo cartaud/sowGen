@@ -14,7 +14,13 @@ const Hull = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const profile = data?.me || {};
 
-  const [formState, setFormState] = useState({ hullNumber: hullNumber, fiberglass: '', gelCoat: '', paint: '', preservation: '' }); //, propulsion: [], sponson: [], engine: [], piping: [], electrical: [], deck: []
+  const [formState, setFormState] = useState({ 
+    hullNumber: hullNumber, 
+    fiberglass: '', 
+    gelCoat: '', 
+    paint: '', 
+    preservation: '' 
+  }); 
   const [addHull] = useMutation(ADD_HULL)
 
   const handleInputChange = (event) => {
